@@ -1,0 +1,50 @@
+<form [formGroup]="newProductForm" (ngSubmit)="onSubmit()"> 
+  <div class="input-group flex-nowrap">
+      <span class="input-group-text" id="addon-wrapping">&#64;</span>
+      <input class="form-control" id="name" formControlName="Product_name" placeholder="Enter product name"> 
+  </div>
+  <div class="input-group flex-nowrap">
+      <span class="input-group-text" id="addon-wrapping">&#64;</span>
+      <input class="form-control" id="description" formControlName="Product_description" placeholder="Enter product description"> 
+  </div>
+  <div class="input-group flex-nowrap">
+      <span class="input-group-text" id="addon-wrapping">&#64;</span>
+      <input class="form-control" id="price" formControlName="Product_price" placeholder="Enter product price"> 
+  </div>
+  <div class="input-group flex-nowrap">
+      <span class="input-group-text" id="addon-wrapping">&#64;</span>
+      <input class="form-control" id="stock" formControlName="Product_stock" placeholder="Enter product stock"> 
+  </div>
+  <div class="input-group flex-nowrap">
+      <span class="input-group-text " id="addon-wrapping">&#64; Select Catagory</span>
+      
+      <select class="form-control" id="c" formControlName="Product_catagory" placeholder="Select product category">
+          <option value="category1 ">Shirt</option>
+          <option value="category2">Pent</option>
+          <option value="category3">Hoodi</option>
+          <!-- Add more options as needed -->
+      </select>
+  </div>
+  <div formArrayName="Product_features"> 
+      <div *ngFor="let courseGroup of Product_features.controls; let i = index" [formGroupName]="i" class="input-group flex-nowrap">
+          <span class="input-group-text" id="addon-wrapping">&#64;</span>
+          <input formControlName="feature_name" placeholder="feature Name" class="form-control">
+          <span class="input-group-text" id="addon-wrapping">&#64;</span> 
+          <input formControlName="feature_value" placeholder="feature value" class="form-control">
+          <!-- Add more input fields as needed for each course -->
+      </div> 
+  </div>
+  <div formArrayName="Product_images">
+    <div *ngFor="let imageControl of Product_images.controls; let i = index"  class="input-group flex-nowrap">
+      <span class="input-group-text" id="addon-wrapping">&#64;</span>
+      <input type="text" class="form-control" [id]="'img' + i" [formControl]="imageControl">
+    </div>
+  </div>
+  <br> 
+  <button class="btn btn-primary" type="submit" [disabled]="!newProductForm.valid">Submit</button> 
+  <br><br> 
+</form> 
+
+<button class="btn btn-primary" (click)="addFeatures()">Add Features</button>
+
+<button class="btn btn-primary" (click)="addImage()">Add Image</button>

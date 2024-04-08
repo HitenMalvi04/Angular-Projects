@@ -1,0 +1,80 @@
+<!-- <h1>{{error_msg}}</h1>
+<div [formGroup]="loginForm">
+    <div class="input-group flex-nowrap">
+        <span class="input-group-text" id="addon-wrapping">&#64;</span>
+        <input type="text" class="form-control" formControlName="username" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+    </div>
+    <div class="input-group flex-nowrap">
+        <span class="input-group-text" id="addon-wrapping">&#64;</span>
+        <input type="password" class="form-control" formControlName="password" placeholder="password" aria-label="password" aria-describedby="addon-wrapping">
+    </div>
+    
+    <button class="btn btn-primary" type="submit" (click)="checkForLogin()" [disabled]="!loginForm.valid">Button</button>
+</div> -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>HTML5 Login Page | Smarteyeapps.com</title>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawsom-all.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="col-xl-10 col-lg-11 login-container">
+                <div class="row">
+                    <div class="col-lg-7 img-box">
+                        <img src="https://clockwise.software/img/blog/e-commerce-website-cost/header-background.webp" alt="">
+                    </div>
+                    <div class="col-lg-5 no-padding" [formGroup]="loginForm">
+                        <div class="login-box">
+                            <h5>Welcome Back!</h5>
+                            <h6 class="error_color">{{error_msg}}</h6>
+                            <div class="login-row row no-margin">
+                                <label for=""><i class="fas fa-envelope"></i> User Name</label>
+                                <input type="text" class="form-control form-control-sm" formControlName="username">
+                            </div>
+
+                             <div class="login-row row no-margin">
+                                <label for=""><i class="fas fa-unlock-alt"></i> Password</label>
+                                <input type="password" class="form-control form-control-sm" formControlName="password">
+                            </div>
+
+                             <div class="login-row row forrr no-margin">
+                               <p> <input type="checkbox"> Remember Me</p>
+                               <p><a href="/login">Forget Password?</a></p>
+                            </div>
+
+                             <div class="login-row btnroo row no-margin">
+                               <button class="btn btn-primary btn-sm" (click)="checkForLogin()" [disabled]="!loginForm.valid"> Sign In</button>
+                               <button class="btn btn-light  btn-sm" routerLink="/signup"> Create Account</button>
+                            </div>
+                            <div class="login-row donroo row no-margin">
+                               <p>Dont have an Account ? <a href="/signup">Sign Up</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="copyc">
+        <p>Designed by <a href="https://www.smarteyeapps.com/">www.smarteyeapps.com</a></p>
+    </div> -->
+</body>
+
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
+    <script src="assets/js/script.js"></script>
+</html>

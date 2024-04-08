@@ -1,0 +1,63 @@
+[
+    {
+        "Product_image" : "https://in-media.apjonlinecdn.com/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/c/0/c08192495_1_9.png",
+        "Product_name" : "HP Laptop",
+        "Product_description": "laptop",
+    
+        "Product_features" : [
+            {
+                "feature_name": "RAM",
+                "feature_value": "8gb"
+            },
+            {
+                "feature_name": "SSD",
+                "feature_value": "256gb"
+            }
+        ],
+        "Product_price": 120000,
+        "Product_stock": 20
+    },
+    {
+        "Product_image" : "https://m.media-amazon.com/images/I/41X1gu-ZbVL._SX300_SY300_QL70_FMwebp_.jpg",
+        "Product_name" : "ASUS Laptop",
+        "Product_description": "laptop",
+    
+        "Product_features" : [
+            {
+                "feature_name": "RAM",
+                "feature_value": "16gb"
+            },
+            {
+                "feature_name": "SSD",
+                "feature_value": "512gb"
+            }
+        ],
+        "Product_price": 130000,
+        "Product_stock": 30
+    },
+    {
+        "Product_image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL_QxVMYIDmb38h87ryXLndZmu_1ce1tKTPr4EMcSHfThvVtatMmTnfQKyW2uAXt9_UPY&usqp=CAU",
+        "Product_name" : "DELL Laptop",
+        "Product_description": "laptop",
+    
+        "Product_features" : [
+            {
+                "feature_name": "RAM",
+                "feature_value": "16gb"
+            },
+            {
+                "feature_name": "SSD",
+                "feature_value": "1tb"
+            }
+        ],
+        "Product_images" :[
+            "data:image/jpeg;base64,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"
+            ,
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkFnv3sF0Y_GpNkJ82XKWjBfIlygYChfbPWg&usqp=CAU"
+        ]
+
+
+        "Product_price": 140000,
+        "Product_stock": 25
+    }
+]

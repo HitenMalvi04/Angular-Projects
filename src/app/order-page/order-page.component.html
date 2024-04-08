@@ -1,0 +1,30 @@
+<!-- orders.component.html -->
+<div class="container">
+  <h2>All Orders</h2>
+  <table class="orders-table">
+    <thead>
+      <tr>
+        <th>Order ID</th>
+        <th>Cart ID</th>
+        <th>Order Price</th>
+        <th>Order Status</th>
+        <th>Cart Products</th>
+        <!-- <th>View Detail</th> -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders">
+        <td>{{ order.Order_id }}</td>
+        <td>{{ order.Cart_id }}</td>
+        <td>{{ order.Order_price }}</td>
+        <td>{{ order.Order_status }}</td>
+        <td>
+          <ul>
+            <li *ngFor="let product of order.Cart_products">{{ product.Product_name }}</li>
+          </ul>
+        </td>
+        <!-- <td>{{  }}</td> -->
+      </tr>
+    </tbody>
+  </table>
+</div>
